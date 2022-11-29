@@ -1,0 +1,41 @@
+  <div class="card text-bg-primary mb-3 centered mt-3 mb-5" style="max-width: 60rem;">
+  <div class="card-header"><b>Como funciona a arrecadação?</b></div>
+  <div class="card-body">
+    <p class="card-text">Todo o processo da doação de livros é super prático e fácil.</p>
+    <p><b>1. </b>	O doador realiza o envio através do nosso site;</p>
+    <p><b>2. </b> Entraremos em contato para agendarmos a retirada das doações no lugar e horário marcado;</p>
+    <p><b>3. </b> O livro será passado por triagens, onde realizaremos a seleção de acordo com o estado de conservação;</p>
+    <p><b>4. </b> Para os livros em boa conservação, realizaremos a separação através de categorias e enviaremos para Instituições e 
+                  ONGs que aponham a causa para que sejam entregues para as pessoas que iram receber estas doações;</p>
+    <p><b>5. </b> Para os livros que não estiverem em bom estado de conservação, serão encaminhados para a reciclagem, 
+                  evitando assim o desperdício e a geração de lixos. </p>
+    </div>
+      </div>
+
+
+<div class="card col-sm-3 centered mt-5 mb-5" style="width: 18rem; ">
+
+
+    <h5 class="tituloDoadores">Listagem de doações</h5>
+    {{#each users}}
+      <ul class="listaDoacao">
+        <p class="titleDoacao">{{this.name}} <p/>
+        <li><b>Categoria:</b> {{this.tipo}} </li>
+        <li><b>Quantidade:</b> {{this.quantity}}</li>
+        
+        <a href="/users/{{this.id}}">Mais detalhes</a>
+
+        <form class="ml-5" action="/users/delete/{{this.id}}" method="POST">
+          <input 
+          type="submit" 
+          value="Excluir" 
+          class="btn btn-danger mt-3 ml-3 p-2" />
+
+          <a name="" id="" class="btn btn-info mt-3 ml-3 p-2" href="/users/edit/{{this.id}}" role="button">Alterar</a>
+        </form>
+      </ul>
+          
+    {{/each}}
+
+  </div>
+</div>

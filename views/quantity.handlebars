@@ -1,0 +1,14 @@
+<div>
+  {{#each users}}
+
+     <h1 class="tituloInfo mt-3">Livros doados por categoria</h1>
+  
+    <div  class="btn-group col-sm centered mt-3" role="group">
+      <a class="btn btn-outline-primary" href="/quantity/romance">Romance</a>
+      <a class="btn btn-outline-warning" href="/quantity/infantil">Infantil</a>
+      <a class="btn btn-outline-secondary" href="/quantity/historia">História</a>
+      <a class="btn btn-outline-success" href="/quantity/didatico">Didático</a>
+    </div>
+    <h2 class="mt-5 mb-5"> Total {{this.tipo}}: {{this.totalTipo}} </h2>
+  {{/each}}
+</div>

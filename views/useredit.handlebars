@@ -1,0 +1,54 @@
+
+<form action="/users/update" method="POST" class="form">
+  <input type="hidden" name="id" value="{{user.id}}" />
+  <div class="form-control-lg mt-5">
+    <label for="Name">Nome</label>
+    <input
+      type="text"
+      name="name"
+      value="{{user.name}}"
+      placeholder="Seu nome completo"
+    />
+  </div>
+  <div class="form-control-lg mt-5">
+    <label id="texto" for="Contact">Contato</label>
+    <input
+      type="text"
+      name="contact"
+      value="{{user.contact}}"
+      placeholder="E-mail ou telefone"
+    />
+  </div>
+  <div class="form-control-lg mt-5">
+    <label for="Tipo">Tipo</label>
+   <select class="form-control-lg mb-5" name="tipo" type="text">
+    <option>{{user.tipo}}</option>
+      <option>Romance</option>
+      <option>Infantil</option>
+      <option>História</option>
+      <option>Didático</option>
+    </select>
+  </div>
+  <div class="form-control-lg mt-5">
+    <label for="Detail">Detalhe do livro</label>
+    <input
+      type="text"
+      name="detail"
+      value="{{user.detail}}"
+      placeholder="Obra/Autor"
+    />
+  </div>
+  <div class="form-control-lg mt-5">
+    <label for="Quantity">Quantidade</label>
+    <select class="form-control-lg mb-5" name="quantity" type="text">
+      <option>{{user.quantity}}</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <input class="btn btn-dark" id="botao" type="submit" value="Salvar alteração" />
+</form>
